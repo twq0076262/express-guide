@@ -201,39 +201,39 @@ app.get('/example/d', [cb0, cb1], function (req, res, next) {
 </thead>
 <tbody>
 <tr>
-<td><a href="/wqfeng/expressjs.com/blob/gh-pages/4x/api.html#res.download">res.download()</a></td>
+<td><a href="http://expressjs.com/4x/api.html#res.download">res.download()</a></td>
 <td>提示下载文件。</td>
 </tr>
 <tr>
-<td><a href="/wqfeng/expressjs.com/blob/gh-pages/4x/api.html#res.end">res.end()</a></td>
+<td><a href="http://expressjs.com/4x/api.html#res.end">res.end()</a></td>
 <td>终结响应。</td>
 </tr>
 <tr>
-<td><a href="/wqfeng/expressjs.com/blob/gh-pages/4x/api.html#res.json">res.json()</a></td>
+<td><a href="http://expressjs.com/4x/api.html#res.json">res.json()</a></td>
 <td>发送一个 JSON 响应。</td>
 </tr>
 <tr>
-<td><a href="/wqfeng/expressjs.com/blob/gh-pages/4x/api.html#res.jsonp">res.jsonp()</a></td>
+<td><a href="http://expressjs.com/4x/api.html#res.jsonp">res.jsonp()</a></td>
 <td>发送一个支持 JSONP 的 JSON 响应。</td>
 </tr>
 <tr>
-<td><a href="/wqfeng/expressjs.com/blob/gh-pages/4x/api.html#res.redirect">res.redirect()</a></td>
+<td><a href="http://expressjs.com/4x/api.html#res.redirect">res.redirect()</a></td>
 <td>重定向请求。</td>
 </tr>
 <tr>
-<td><a href="/wqfeng/expressjs.com/blob/gh-pages/4x/api.html#res.render">res.render()</a></td>
+<td><a href="http://expressjs.com/4x/api.html#res.render">res.render()</a></td>
 <td>渲染视图模板。</td>
 </tr>
 <tr>
-<td><a href="/wqfeng/expressjs.com/blob/gh-pages/4x/api.html#res.send">res.send()</a></td>
+<td><a href="http://expressjs.com/4x/api.html#res.send">res.send()</a></td>
 <td>发送各种类型的响应。</td>
 </tr>
 <tr>
-<td><a href="/wqfeng/expressjs.com/blob/gh-pages/4x/api.html#res.sendFile">res.sendFile</a></td>
+<td><a href="http://expressjs.com/4x/api.html#res.sendFile">res.sendFile</a></td>
 <td>以八位字节流的形式发送文件。</td>
 </tr>
 <tr>
-<td><a href="/wqfeng/expressjs.com/blob/gh-pages/4x/api.html#res.sendStatus">res.sendStatus()</a></td>
+<td><a href="http://expressjs.com/4x/api.html#res.sendStatus">res.sendStatus()</a></td>
 <td>设置响应状态代码，并将其以字符串形式作为响应体的一部分发送。</td>
 </tr>
 </tbody>
@@ -241,7 +241,7 @@ app.get('/example/d', [cb0, cb1], function (req, res, next) {
 
 ## app.route()
 
-可使用 `app.route()` 创建路由路径的链式路由句柄。由于路径在一个地方指定，这样做有助于创建模块化的路由，而且减少了代码冗余和拼写错误。请参考 [Router() 文档](/4x/api.html#router) 了解更多有关路由的信息。
+可使用 `app.route()` 创建路由路径的链式路由句柄。由于路径在一个地方指定，这样做有助于创建模块化的路由，而且减少了代码冗余和拼写错误。请参考 [Router() 文档](http://expressjs.com/4x/api.html#router) 了解更多有关路由的信息。
 
 下面这个示例程序使用 `app.route()` 定义了链式路由句柄。
 

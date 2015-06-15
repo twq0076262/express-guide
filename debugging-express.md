@@ -15,6 +15,7 @@ $ DEBUG=express:* node index.js
 ```
 > set DEBUG=express:* & node index.js
 ```
+
 在由 [express generator](http://expressjs.com/starter/generator.html) 生成的默认应用中执行，会打印出如下信息：
 
 ```

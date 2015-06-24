@@ -67,3 +67,27 @@ function errorHandler(err, req, res, next) {
 }
 ```
 
+如果向 `next()` 传入参数（除了 'route' 字符串），Express 会认为当前请求有错误的输出，因此跳过后续其他非错误处理和路由/中间件函数。如果需做特殊处理，需要创建新的错误处理路由，如下节所示。
+
+
+如果路由句柄有多个回调函数，可使用 'route' 参数跳到下一个路由句柄。比如：
+
+```
+app.get('/a_route_behind_paywall', 
+  function checkIfPaidSubscriber(req, res, next) {
+    if(!req.user.hasPaid) { 
+      // 继续处理该请求
+      next('route');
+    }
+  }, function getPaidContent(req, res, next) {
+    PaidContent.find(function(err, doc) {
+      if(err) return next(err);
+      res.json(doc);
+    });
+  });
+```
+
+在这个例子中，句柄 `getPaidContent` 会被跳过，但 `app` 中为 `/a_route_behind_paywall` 定义的其他句柄则会继续执行。
+
+ 
+> `next()` 和 `next(err)` 类似于 `Promise.resolve()` 和 `Promise.reject()`。它们让您可以向 Express 发信号，告诉它当前句柄执行结束并且处于什么状态。`next(err)` 会跳过后续句柄，除了那些用来处理错误的句柄。
